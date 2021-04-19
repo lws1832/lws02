@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    //Template literals 템플릿 리터럴
+    let name = 'ingoo'
+    let txt = `Hello World! ${name}`;
+    console.log(txt);
+
+    let a = "ingoo";
+    let b = "자바";
+    let c = "스크립트";
+    let str = `저는 ${a}이고 ${b+c}를 좋아합니다.`;
+    console.log(str); 
+    
+
+
+
+    // 깊은복사 얇은복사 이야기
+    // https://medium.com/watcha/%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%99%80-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC%EC%97%90-%EB%8C%80%ED%95%9C-%EC%8B%AC%EB%8F%84%EC%9E%88%EB%8A%94-%EC%9D%B4%EC%95%BC%EA%B8%B0-2f7d797e008a
+    let arr = [1,2,3]; 
+
+    arr.push(4); // [1,2,3,4]
+    arr.pop();   // [1,2,3]
+    console.log(arr.indexOf(1,0)); // 1: 찾을요소 , 2: 어디서부터 찾을지 결과값은 인덱스값
+    console.log(arr.indexOf(2,1));
+    console.log(arr.indexOf(2,2));
+    console.log(arr.indexOf(3,2));
+
+    console.log(arr.slice(1)); //1: 시작 위치 2: 자르는 위치 특이사항은 시작은포함 자르는위치는 까지입니다.
+
+
+    let arr1 = Array.from(Array(5), ()=> new Array(2).fill(0));
+    console.log(arr1);
+
+    let arr2 = Array.from(Array(5).fill(1));
+    console.log(arr2);
+
+    arr1[0][1] = '33';
+    console.log(arr1);
+
+    arr1.forEach(v=>{
+        console.log(v);
+        v.forEach(v2=>{
+            console.log(v2);
+        });
+    });
+    
+
+    //9층 9호실까지 배열
+    let gugudan =  [
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9]
+    ];
+    
+    // 2중배열 forEach문 사용해서 
+   /* gugudan.forEach((v,index)=>{//밸류값 ,인덱스
+        v.forEach(v2 =>{
+            console.log(`${index+2}*${v2}=${index*v2}`);
+        });
+        console.log(' ');
+    });
+*/
+
+gugudan.forEach((v,i)=>{
+    v.forEach(v2 =>{
+        console.log(`${i+2}*${v2}=${(i+2)*v2}`);
+    });
+    console.log('');
+});
+
+gugudan.forEach((v,i)=>{
+    v.forEach(v2 =>{
+        console.log(`${i+10}*${v2}=${(i+10)*v2}`);
+    });
+    console.log('');
+});
+gugudan.forEach((v,i)=>{
+    v.forEach(v2=>{
+        console.log(`${i+2}*${v2}=${(i+2)*v2}`)
+    })
+})
+    console.log(gugudan);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
