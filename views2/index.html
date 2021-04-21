@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello wolrd {{title}} </br>
+    아이디 : {{user_id}} </br>
+    패스워드 : {{user_pw}}
+</br>
+<!-- 아이디랑 패스워드 일부로 안되게 한거-->
+<form method="post" id="" action="http://localhost:3000">
+    이름:<input type="text" name="name"><br/>
+    아이디:<input type="text" name="user_id"><br/>
+    패스워드:<input type="password" name="user_pw"><br/>
+    <!--name=곽인구&user_id=와우66&user_pw=1245
+        http://localhost:3000?name=곽인구&user_id=와우66&user_pw=1245
+        위와 같이 링크이동을 한것이다.
+    -->
+    <input type="submit" value="버튼"><!--<button>버튼</button>-->
+</form>
+<!--
+    HTML
+    form?? 안에있는 input 내용을 action 쪽에다가 링크이동을 시킨다.
+-->
+</body>
+</html>
